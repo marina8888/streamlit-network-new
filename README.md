@@ -1,1 +1,1 @@
-# streamlit-network-new
+# streamlit-network
