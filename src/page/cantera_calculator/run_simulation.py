@@ -1,6 +1,8 @@
 import pandas as pd
 import cantera as ct
 import numpy as np
+
+
 def select_mechanism(fuels):
     fuels = set(fuels) - {'None'}
     if any(f in fuels for f in ['CH4', 'C2H6', 'C3H8', 'H2', 'CO']):
@@ -14,7 +16,6 @@ def select_mechanism(fuels):
     else:
         raise KeyError("No mechanism selected")
     return "gri.yaml"  # Default fallback
-
 
 
 def run_simulation(inputs):
