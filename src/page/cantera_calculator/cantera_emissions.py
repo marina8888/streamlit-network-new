@@ -15,8 +15,10 @@ def run():
     reset = st.button("🔄 Reset", key="reset")
 
     if run_sim:
-        st.session_state.results = run_simulation(user_inputs)
-        st.session_state.results["phi"] = user_inputs["phi"]  # 🔧 Add phi to results
+        with st.spinner("🔄 Running simulation... Please wait 3-5 minutes."):
+                # Replace this with your actual simulation function
+                st.session_state.results = run_simulation(user_inputs)
+                st.session_state.results["phi"] = user_inputs["phi"]  # 🔧 Add phi to results
 
     if st.session_state.results:
         display_results(st.session_state.results)

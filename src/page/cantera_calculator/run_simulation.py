@@ -30,7 +30,7 @@ def run_simulation(inputs):
     mech_file = select_mechanism(fuels)
     gas = ct.Solution(f"resources/mech/{mech_file}")
 
-    phi_range = np.arange(0.5, 2.05, 0.05)
+    phi_range = np.arange(phi_target-0.2, phi_target+0.2, 0.05)
     data = {
         "ϕ": [],
         "CO": [],
@@ -52,7 +52,25 @@ def run_simulation(inputs):
         gas.TP = T_in, P_atm * ct.one_atm
 
         # Equilibrate at constant HP to simulate adiabatic flame conditions
-        gas.equilibrate("HP")
+        gas.TP = 300.0, ct.one_atm
+        gas.set_equivalence_ratio(phi=phi, fuel=fuel_str, oxidizer=oxid)
+
+        # Create a flame object
+        width = 0.03  # 3 cm flame domain width
+        flame = ct.FreeFlame(gas, width=width)
+
+        # Enable energy equation for adiabatic flame
+        flame.energy_enabled = True
+
+        # Set refinement criteria (optional but helps convergence)
+        flame.set_refine_criteria(ratio=3, slope=0.06, curve=0.12)
+
+        # Solve the flame
+        flame.solve(loglevel=1, auto=True)
+        if Exception:
+            print("failed")
+        # Output results
+        print(f"Adiabatic flame temperature: {flame.T[-1]:.2f} K")
 
         def ppm(species):
             return gas[species].X[0] * 1e6 if species in gas.species_names else 0.0
