@@ -60,7 +60,7 @@ def get_emissions_summary(gas):
                 total_x += gas[sp].X[0]
                 species_found = True
         if species_found:
-            summary[label] = total_x * 1e6  # convert mole fraction to ppm
+            summary[label] = total_x * 1000000  # convert mole fraction to ppm
         else:
             summary[label] = None  # Or "Not available"
     return summary

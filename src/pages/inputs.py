@@ -16,7 +16,7 @@ def run():
         "Gas Turbine",
         "Internal Combustion Engine",
     ]
-    selected_technologies = st.radio("Select technology types", tech_options)
+    selected_technologies = st.radio("Select technology to model", tech_options)
 
     # Uses (SCR or NSCR)
     st.markdown("### Add-Ons")
