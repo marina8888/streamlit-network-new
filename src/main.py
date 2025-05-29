@@ -1,20 +1,28 @@
-from combustion import cantera_emissions, tds_input
+from pages import cover_page, fuel_converter, elv_factors, inputs
+from pages.cantera_calculator import cantera_emissions
 import streamlit as st
+
 def main():
+    st.set_page_config(page_title="Combustion Dashboard", layout="wide", page_icon="resources/images/img.png")
 
-    st.set_page_config(page_title="Combustion Dashboard", layout="wide")
-    st.title("Combustion Analysis Dashboard")
+    # Create tabs
+    tab_cover, tab_inputs, tab1, tab2, tab3 = st.tabs(["📘 Introduction", "Site Configuration", "Fuel Converter", "Cantera Emissions", "ELV Factors"])
 
-    # Define the tabs
-    tab1, tab2 = st.tabs(["Cantera Emissions", "TDS Input"])
+    with tab_cover:
+        cover_page.run()
 
-    # Tab 1: Cantera Emissions
+
+    with tab_inputs:
+        inputs.run()
+
     with tab1:
+        fuel_converter.run()
+
+    with tab2:
         cantera_emissions.run()
 
-    # Tab 2: TDS Input
-    with tab2:
-        tds_input.run()
+    with tab3:
+        elv_factors.run()
 
 
 if __name__ == "__main__":
