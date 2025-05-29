@@ -11,6 +11,10 @@ def run():
     st.image("resources/images/process.png", caption="Inputs and Outputs", width=600)
 
     st.markdown("""
+    ### 📁 Site Configuration Tab
+    - Capture information of previous sites with achievable ELVs for future records
+    - For sites fuel switching to new fuel - record to attach to permit.
+    
     ### 📁 Fuel Converter Tab
     - Converts TDS information to inputs for Cantera simulation tab. 
     - Obtains scaling factors for emissions conversion. 
