@@ -1,2 +1,0 @@
-,project_status,length,build_year,underground,v_nom,tags,num_parallel,type,geometry,bus0,bus1,under_construction,carrier,s_nom,s_max_pu
-TYNDP2020_77,in_permitting,90.0,2024,False,380,"""url""=>""https://tyndp2020-project-platform.azurewebsites.net/projectsheets/transmission/252"", ""tyndp2020_proj_id""=>""252"", ""tyndp2020_invest_id""=>""1456"", ""tyndp_status""=>""in_permitting""",2,Al/St 240/40 4-bundle 380.0,"LINESTRING (4.603271 51.209464, 5.71701000000001 51.094036)",way/32002039-380,way/124703985-380,True,AC,3396.21,0.7
