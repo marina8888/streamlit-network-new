@@ -14,7 +14,7 @@ def get_user_inputs():
     phi = st.sidebar.slider("Equivalence Ratio (ϕ)", 0.5, 2.0, 1.0, 0.05, key="phi")
     T_in = st.sidebar.slider("Initial Temperature (K)", 300, 1500, 300, 50, key="Tin")
     P_atm = st.sidebar.slider("Pressure (atm)", 1, 20, 1, key="Patm")
-    ash_ppm = st.sidebar.number_input("Ash level (%)", min_value=0.0, value=10.0, step=1.0, key="dust")
+    dust_ppm = st.sidebar.number_input("Ash level (%)", min_value=0.0, value=10.0, step=1.0, key="dust")
     sulfur_ppm = st.sidebar.number_input("Sulphur in fuel (%)", min_value=0.0, value=0.0, step=0.01, key="sulfur")
 
     # Fuel mixing

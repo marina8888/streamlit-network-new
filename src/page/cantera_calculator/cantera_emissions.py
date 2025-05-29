@@ -3,7 +3,7 @@ from .run_simulation import run_simulation
 from .ui import get_user_inputs, display_results
 
 def run():
-    st.title("🔥 Cantera Combustion & Emissions Simulator")
+    st.title("🔥Combustion & Emissions Simulator")
 
     # Store results in session state to persist them across rerenders
     if "results" not in st.session_state:
