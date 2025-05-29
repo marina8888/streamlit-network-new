@@ -1,5 +1,5 @@
-from page import cover_page, fuel_converter, elv_factors, inputs
-from page.cantera_calculator import cantera_emissions
+from src.page import cover_page, fuel_converter, elv_factors, inputs
+from src.page.cantera_calculator import cantera_emissions
 import streamlit as st
 
 def main():
