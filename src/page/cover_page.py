@@ -19,8 +19,8 @@ def run():
     - Converts TDS information to inputs for Cantera simulation tab, primarily used for blended fuels with challenging compositions. 
     - A biodiesel composition is typically a mix of FAME or HVO and PtL (e-diesel) which are paraffinic, or biocrude which includes multicomponent (alcohols and nitrogen included in blend)
     
-    ## 🔥 Major Emission-Causing Impurities in Biodiesel
-
+    ## 🔥 Major Emission-Causing Impurities in Biodiesel """)
+    st.markdown("""
 | Impurity          | Source / Cause                          | Emission Impact                                    | Regulatory Concern |
 |-------------------|------------------------------------------|----------------------------------------------------|--------------------|
 | **Sulfur (S)**    | Feedstock, catalyst residues             | Forms **SO₂**, **sulfates**, corrosive acids; contributes to **PM** | Must be <10–15 ppm (EN 14214 / ASTM D6751) |
@@ -38,8 +38,8 @@ def run():
 | **Unreacted Triglycerides** | Incomplete transesterification | Poor atomization, coking → **higher PM, CO**        | <0.2% wt (EN 14214) |
 | **Mono-/Diglycerides**| Reaction intermediates              | Injector fouling, coking → **PM, incomplete combustion** | <0.2% wt combined |
 | **Particulate Contaminants (solids)** | Poor filtration       | Abrasion, fouling, increased **PM**                 | Filtered to <1 µm typically |
-
-    
+""")
+    st.markdown("""
     ### 🧪 Cantera Emissions Tab
     - Runs a Cantera simulation using a FreeFlame object to predict emerging and possible emissions. 
     - Calculates emissions based on fuel and input conditions (fuel blends are possible if requested). 
