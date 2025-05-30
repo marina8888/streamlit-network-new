@@ -19,7 +19,7 @@ def run():
     - Converts TDS information to inputs for Cantera simulation tab, primarily used for blended fuels with challenging compositions. 
     - A biodiesel composition is typically a mix of FAME or HVO and PtL (e-diesel) which are paraffinic, or biocrude which includes multicomponent (alcohols and nitrogen included in blend)
     
-    ## 🔥 Major Emission-Causing Impurities in Biodiesel """)
+    #### 🔥 Major Emission-Causing Impurities in Biodiesel """)
     st.markdown("""
 | Impurity          | Source / Cause                          | Emission Impact                                    | Regulatory Concern |
 |-------------------|------------------------------------------|----------------------------------------------------|--------------------|
