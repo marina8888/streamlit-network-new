@@ -64,7 +64,7 @@ def run_simulation(inputs):
         flame.energy_enabled = True
 
         # Set refinement criteria (optional but helps convergence)
-        flame.set_refine_criteria(ratio=3, slope=0.06, curve=0.12)
+        flame.set_refine_criteria(ratio=3, slope=0.1, curve=0.2)
 
         # Solve the flame
         flame.solve(loglevel=1, auto=True)
